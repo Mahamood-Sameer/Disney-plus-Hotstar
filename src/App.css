@@ -1,17 +1,17 @@
-.app__body{
-    display: flex;
-    flex-direction: column;
+.app__body {
+  display: flex;
+  flex-direction: column;
 }
-.hover_containers{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 40px;
-    padding-right: 40px;
+.hover_containers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
 }
-@media (max-width:1350px){
-    .hover_containers{
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+@media (max-width: 1350px) {
+  .hover_containers {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

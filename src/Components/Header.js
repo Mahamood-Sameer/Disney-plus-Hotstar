@@ -20,9 +20,11 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Fade from "@mui/material/Fade";
 // auth
-import { provider,auth } from "../Firebase/firebase";
+import { provider, auth } from "../Firebase/firebase";
+//
+import { Link } from "react-router-dom";
 
-function Header({USER}) {
+function Header({ USER }) {
   // Dialouge Box state Variables
   const [open, setOpen] = useState(false);
 
@@ -34,29 +36,29 @@ function Header({USER}) {
     setOpen(false);
   };
 
-  const Login = ()=>{
+  const Login = () => {
     auth
       .signInWithPopup(provider)
       .then((result) => {
-          setOpen(false)
+        setOpen(false);
       })
       .catch((err) => {
         alert(err.message);
       });
-  }
+  };
 
-  const Logout=()=>{
+  const Logout = () => {
     auth.signOut();
-    window.location.reload()
-  }
+    window.location.reload();
+  };
 
   //  user
   const [user, setuser] = useState(null);
-  useEffect(()=>{
-    auth.onAuthStateChanged((user)=>{
-      setuser(user)
-    })
-  },[user])
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      setuser(user);
+    });
+  }, [user]);
 
   //   Responsive
   const [anchorEl, setAnchorEl] = useState(null);
@@ -79,7 +81,9 @@ function Header({USER}) {
         </Tooltip>
 
         <MenuIcon className="header_menuicon" />
-        <img src={logo_light} alt="logo" className="header__logo" />
+        <Link to="/">
+          <img src={logo_light} alt="logo" className="header__logo" />
+        </Link>
         <p>TV</p>
         <p>Movies</p>
         <p>Sports</p>

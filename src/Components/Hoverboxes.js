@@ -4,11 +4,8 @@ function Hoverboxes({ image, title, vid }) {
   return (
     <div className="hoverbox ">
       <img src={image} alt={title} className="hoverbox_image" />
-      <video  autoPlay loop muted>
-        <source
-          type="video/mp4"
-          src={vid}
-        />
+      <video autoPlay loop muted>
+        <source type="video/mp4" src={vid} />
       </video>
     </div>
   );

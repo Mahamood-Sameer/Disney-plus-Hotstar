@@ -1,0 +1,72 @@
+.DetailsPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: black;
+  width: 92vw;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+.DetailImage {
+  width: 60vw;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.Description {
+  padding: 20px;
+  flex: 1;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Description_subs {
+  color: yellow;
+  font-size: 13px;
+  font-weight: 800;
+}
+.controllers {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  color: whitesmoke;
+  cursor: pointer;
+}
+.icons {
+  font-size: 35px !important;
+}
+.controllers strong {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.timestamps {
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+  justify-content: space-between;
+}
+.socialMedia {
+  display: flex;
+  align-items: center;
+  font-size: 17px !important;
+  justify-content: space-between;
+  padding-right: 30px;
+}
+
+@media (max-width:1150px) {
+    .DetailsPage{
+        flex-direction: column-reverse;
+        width: 88vw;
+    }
+    .DetailImage {
+        width: 90vw;
+        object-fit: contain;
+    }
+    .socialMedia {
+        font-size: 14px !important;
+    }
+    .controllers strong{
+        font-size: 17px;
+    }
+}

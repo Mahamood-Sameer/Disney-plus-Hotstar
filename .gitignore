@@ -13,6 +13,8 @@
 
 /src/Requests
 /src/Firebase
+.firebaserc
+firebase.json
 
 # misc
 .DS_Store

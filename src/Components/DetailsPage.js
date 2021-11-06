@@ -8,6 +8,9 @@ import AddIcon from "@mui/icons-material/Add";
 import ShareIcon from "@mui/icons-material/Share";
 // Params
 import { useParams } from "react-router";
+// Progress
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 
 function DetailsPage() {
   const [Movie, setMovie] = useState(null);
@@ -53,12 +56,17 @@ function DetailsPage() {
           </div>
         </div>
       </div>
-
-      <img
-        src={`https://images.tmdb.org/t/p/original/${Movie?.data.backdrop_path}`}
-        alt=""
-        className="DetailImage"
-      />
+      {Movie ? (
+        <img
+          src={`https://images.tmdb.org/t/p/original/${Movie?.data.backdrop_path}`}
+          alt=""
+          className="DetailImage"
+        />
+      ) : (
+        <Box className="loading">
+          <CircularProgress />
+        </Box>
+      )}
     </div>
   );
 }
